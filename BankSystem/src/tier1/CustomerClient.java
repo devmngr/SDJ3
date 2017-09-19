@@ -23,5 +23,11 @@ public class CustomerClient {
 		}
 	}
 	
+	
+	public static void main(String[] args) throws RemoteException {
+		CustomerClient customer = new CustomerClient();
+	}
+	
+	
 
 }

@@ -33,7 +33,7 @@ public class ClientServicingServer extends UnicastRemoteObject implements IRmi {
 	}
 
 	@Override
-	public double inserAmount(double amount) {
+	public double insertAmount(double amount) {
 		// TODO Auto-generated method stub
 		return 0;
 	}

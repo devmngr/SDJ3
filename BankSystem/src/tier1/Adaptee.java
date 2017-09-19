@@ -20,10 +20,9 @@ package tier1;
 		private Connection connection;
 
 		private static final String DRIVER = "oracle.jdbc.driver.OracleDriver";
-		private static final String URL = "jdbc:oracle:thin:bogdan/bogdan@localhost";
+		private static final String URL = "jdbc:oracle:thin:@localhost:1521:orcl";
 		private static final String USER = "bogdan";
-		private static final String PASSWORD = "bogdan";
-		
+		private static final String PASSWORD = "bogdan";		
 		/**
 		 * Constructor that uses driver, url, user and password
 		 * @param driver the driver for postgressql

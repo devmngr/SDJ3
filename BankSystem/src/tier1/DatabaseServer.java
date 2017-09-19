@@ -8,6 +8,7 @@ import java.rmi.server.UnicastRemoteObject;
 
 public class DatabaseServer extends UnicastRemoteObject implements IRmi  {
 
+	private DatabaseAdapter adapter;
 	
 	public DatabaseServer() throws RemoteException, ClassNotFoundException {
 		super();
@@ -28,12 +29,12 @@ public class DatabaseServer extends UnicastRemoteObject implements IRmi  {
 
 	@Override
 	public void createAccount(double amount) {
-		// TODO Auto-generated method stub
+		adapter.createAccount();
 		
 	}
 
 	@Override
-	public double inserAmount(double amount) {
+	public double insertAmount(double amount) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
