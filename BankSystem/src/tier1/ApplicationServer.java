@@ -32,13 +32,17 @@ public class ApplicationServer extends UnicastRemoteObject implements IRmi{
 	}
 
 	@Override
-	public double insertAmount(double amount) {
-		// TODO Auto-generated method stub
-		return 0;
+	public void insertAmount(double amount) {
+	
 	}
 
 	@Override
-	public double widrawAmount(double amount) {
+	public void widrawAmount(double amount) {
+		
+	}
+
+	@Override
+	public double checkBalance() {
 		// TODO Auto-generated method stub
 		return 0;
 	}

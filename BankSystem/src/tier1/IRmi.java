@@ -5,7 +5,8 @@ import java.rmi.RemoteException;
 
 public interface IRmi extends Remote{
 	
-	void createAccount(double amount)throws RemoteException;
-	double insertAmount(double amount)throws RemoteException;
-	double widrawAmount(double amount)throws RemoteException;
+	public void createAccount(double amount)throws RemoteException;
+	public void insertAmount(double amount)throws RemoteException;
+	public void widrawAmount(double amount)throws RemoteException;
+	public double checkBalance();
 }

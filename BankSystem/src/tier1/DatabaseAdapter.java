@@ -1,5 +1,7 @@
 package tier1;
 
+import java.sql.SQLException;
+
 public class DatabaseAdapter {
 
 	
@@ -10,18 +12,28 @@ public class DatabaseAdapter {
 	}
 	
 	
+	public void createAccount(double amount) throws SQLException {
+		
+		String sql = "insert into bankaccount values (16,"+amount+")";
+		adaptee.query(sql);
+
+
+	}
+	public void insertAmount(double amount) {
 	
-	
-	public void createAccount() {
 		
 		
-	}
-	public double insertAmount(double amount) {
 	
+	}
+	public void widrawAmount(double amount) {
+
 		
-		return 0;
 	}
-	public double widrawAmount(double amount) {
-		return 0;
+	
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		DatabaseAdapter ad = new DatabaseAdapter();
+		ad.createAccount(256);
 	}
+	
+
 }

@@ -6,10 +6,10 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
-public class DatabaseServer extends UnicastRemoteObject implements IRmi  {
+public class DatabaseServer extends UnicastRemoteObject implements IRmi {
 
 	private DatabaseAdapter adapter;
-	
+
 	public DatabaseServer() throws RemoteException, ClassNotFoundException {
 		super();
 		Registry reg = LocateRegistry.createRegistry(1099);
@@ -29,20 +29,25 @@ public class DatabaseServer extends UnicastRemoteObject implements IRmi  {
 
 	@Override
 	public void createAccount(double amount) {
-		adapter.createAccount();
-		
+		//adapter.createAccount(amount);
+
 	}
 
 	@Override
-	public double insertAmount(double amount) {
+	public void insertAmount(double amount) {
+		adapter.insertAmount(amount);
+	}
+
+	@Override
+	public void widrawAmount(double amount) {
+		adapter.widrawAmount(amount);
+
+	}
+
+	@Override
+	public double checkBalance() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
-	public double widrawAmount(double amount) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
 }

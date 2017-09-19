@@ -6,6 +6,11 @@ create table bankaccount
 );
 
 
+insert into bankaccount values (3,12);
+
+
+
+
 create sequence sqAcount
   start with 1
   increment by 1
