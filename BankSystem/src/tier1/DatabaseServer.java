@@ -35,7 +35,7 @@ public class DatabaseServer extends UnicastRemoteObject implements IRmi {
 
 	@Override
 	public void insertAmount(double amount) {
-		adapter.insertAmount(amount);
+		//adapter.insertAmount(amount);
 	}
 
 	@Override
